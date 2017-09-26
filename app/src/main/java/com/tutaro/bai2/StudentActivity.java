@@ -3,6 +3,7 @@ package com.tutaro.bai2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,6 +38,8 @@ public class StudentActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         mAddName = (Student) bundle.getParcelable(MainActivity.NAME_STUDENT);
         mName.setText(mAddName.getName());
+        Log.d("",mAddName.getName() + "");
+
         mSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
